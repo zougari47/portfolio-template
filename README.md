@@ -1,7 +1,8 @@
 <h1 align="center">Portfolio Template For Developers</h1>
 
 <div align="center">
-<img src="./src/img/docs/demo.gif" width="600px">
+<img src="https://user-images.githubusercontent.com/24995094/229810467-cbe0306e-7e9c-414f-a6ae-0b426ee3ec43.gif" width="600px">
+
 </div> <br>
 
 <p align="center">
