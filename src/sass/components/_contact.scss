@@ -1,0 +1,47 @@
+#contact {
+  margin-bottom: 2rem;
+
+  .container > .row {
+    @include media($bp-lg) {
+      height: min(500px, 95vh);
+    }
+  }
+
+  h1 {
+    @include h1;
+    margin-top: 1rem;
+  }
+
+  .hello {
+    span {
+      display: block;
+      font-size: 2rem;
+      font-style: italic;
+      font-weight: 500;
+    }
+  }
+}
+
+.thanks {
+  padding: 1rem;
+  color: #198754;
+  border: 1px solid #198754;
+  display: none;
+}
+
+button.btn {
+  pointer-events: auto !important;
+}
+
+button.btn[disabled] {
+  cursor: not-allowed;
+}
+
+.small_label {
+  font-size: 0.8rem;
+  @include font-primary;
+}
+
+.spinner-border {
+  display: none;
+}

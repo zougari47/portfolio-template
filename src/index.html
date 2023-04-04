@@ -1,0 +1,702 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#0564bd" />
+    <meta name="author" content="Ahmed Zougari" />
+    <link rel="icon" type="image/png" href="./img/favicon.png" />
+    <meta
+      name="keywords"
+      content="ahmed, zougari, zougari47, ibnelkhayat, developer, javascript, marrakech, freelancer, website, programmer, site, ahmedzougari"
+    />
+    <meta
+      name="description"
+      content="I'm a Frontend Developer based in Morocco who is passionate about delivering value to businesses through technology. I love the challenge of finding creative solutions to problems, and I enjoy collaborating with teams to achieve great results."
+    />
+    <meta
+      name="google-site-verification"
+      content="PBNvZp4y0C4ul3V64DmyjKb3EHKD4F9QEAv9tsgH4jE"
+    />
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-F3SK5CL6LE"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || []
+      function gtag() {
+        dataLayer.push(arguments)
+      }
+      gtag('js', new Date())
+
+      gtag('config', 'G-F3SK5CL6LE')
+    </script>
+    <title>Ahmed Zougari - Frontend/Fullstack Developer</title>
+  </head>
+  <body
+    data-bs-spy="scroll"
+    data-bs-target="#toggleMobileMenu"
+    data-bs-offset="0"
+    tabindex="0"
+  >
+    <!-- ==== Header ==== -->
+    <header class="sticky-top">
+      <nav class="navbar navbar-expand-lg navbar-light py-3" id="header">
+        <div class="container">
+          <a class="navbar-brand" href="/">
+            <!-- <img src="./img/logo.svg" alt="logo" /> -->
+            <span>Ahmed</span> &lt;/&gt; <span>Zougari</span>
+          </a>
+
+          <button id="theme-btn" class="align-self-center ms-auto me-3">
+            <i class="bi bi-moon-fill"></i>
+            <i class="bi bi-brightness-high-fill"></i>
+          </button>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#toggleMobileMenu"
+            aria-controls="toggleMobileMenu"
+            aria-expanded="false"
+            aria-table="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="toggleMobileMenu">
+            <ul class="navbar-nav ms-lg-auto">
+              <li class="nav-item">
+                <a href="#hero" aria-current="page" class="nav-link active"
+                  >Home</a
+                >
+              </li>
+              <li class="nav-item">
+                <a href="#about" class="nav-link">About</a>
+              </li>
+              <li class="nav-item">
+                <a href="#portfolio" class="nav-link">Projects</a>
+              </li>
+              <li class="nav-item">
+                <a href="#contact" class="nav-link">Contact</a>
+              </li>
+              <li class="nav-item">
+                <a
+                  href="https://blog.ahmedzougari.com"
+                  target="_blank"
+                  class="nav-link"
+                  >Blog</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <!-- ==== End Header ==== -->
+
+    <div id="root">
+      <!-- ==== Hero ==== -->
+      <div id="hero">
+        <div class="container">
+          <div class="row">
+            <div class="col-12 col-lg-6 mt-lg-0 d-grid align-content-center">
+              <section
+                class="text-center text-lg-start"
+                data-aos="zoom-in"
+                data-aos-delay="1000"
+                data-aos-duration="1000"
+              >
+                <p>Hello! 👋 My name is</p>
+                <h1>AHMED ZOUGARI</h1>
+                <p><span id="headline"></span></p>
+                <div class="social-links mx-auto mx-lg-0">
+                  <div class="row">
+                    <div class="col-3">
+                      <a href="mailto:contact@ahmedzougari.com" target="_blank">
+                        <i class="bi bi-envelope-fill"></i>
+                      </a>
+                    </div>
+                    <div class="col-3">
+                      <a href="https://github.com/zougari47" target="_blank">
+                        <i class="bi bi-github"></i>
+                      </a>
+                    </div>
+                    <div class="col-3">
+                      <a
+                        href="https://www.linkedin.com/in/zougari47/"
+                        target="_blank"
+                      >
+                        <i class="bi bi-linkedin"></i>
+                      </a>
+                    </div>
+                    <div class="col-3">
+                      <a href="https://twitter.com/zougari47" target="_blank">
+                        <i class="bi bi-twitter"></i>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </section>
+            </div>
+            <div class="col-12 col-lg-6 d-grid align-content-center">
+              <div
+                class="img-container"
+                id="img-wrapper"
+                data-aos="fade-left"
+                data-aos-duration="1500"
+                data-aos-delay="2000"
+              >
+                <div id="canvas"></div>
+
+                <div class="curtain">
+                  <img
+                    src="./img/ahmed_zougari.png"
+                    crossorigin=""
+                    data-sampler="simplePlaneTexture"
+                    width="400"
+                    height="400"
+                    alt="Ahmed Zougari"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- ==== End Hero ==== -->
+
+      <main>
+        <!-- ==== About ==== -->
+        <div id="about">
+          <div class="container">
+            <div class="row">
+              <div class="col-12 col-lg-6 d-grid align-content-center">
+                <section
+                  id="about_section"
+                  class="my-5 my-lg-0"
+                  data-aos="fade-right"
+                  data-aos-mirror="true"
+                  data-aos-duration="1500"
+                >
+                  <h1>ABOUT ME</h1>
+                  <p>
+                    I'm a Frontend Developer based in Morocco who is passionate
+                    about delivering value to businesses through technology. I
+                    love the challenge of finding creative solutions to
+                    problems, and I enjoy collaborating with teams to achieve
+                    great results.<br />
+                  </p>
+                  <p>
+                    I am dedicated to keeping up-to-date with the latest
+                    technologies and trends to provide the best solutions for my
+                    clients.
+                  </p>
+                  <p>
+                    I pay great attention to detail in the design and
+                    development of my projects. My ultimate goal is to create
+                    software that is both user-friendly and impactful in
+                    achieving the client's objectives.
+                  </p>
+                </section>
+              </div>
+              <div class="col-12 col-lg-6 d-grid align-content-center">
+                <section
+                  id="skills_section"
+                  class="mb-5 mb-lg-0"
+                  data-aos="fade-left"
+                  data-aos-duration="1000"
+                >
+                  <h1>SKILLS</h1>
+                  <div class="row">
+                    <div class="col-6 col-md-4">
+                      <img src="./img/stack-icons/html.svg" alt="html" />
+                      <span>HTML</span>
+                    </div>
+                    <div class="col-6 col-md-4">
+                      <img src="./img/stack-icons/css.svg" alt="css" />
+                      <span>CSS</span>
+                    </div>
+                    <div class="col-6 col-md-4">
+                      <img src="./img/stack-icons/sass.svg" alt="sass" />
+                      <span>SASS</span>
+                    </div>
+                    <div class="col-6 col-md-4">
+                      <img
+                        src="./img/stack-icons/bootstrap.svg"
+                        alt="bootstrap"
+                      />
+                      <span>Bootstrap</span>
+                    </div>
+                    <div class="col-6 col-md-4">
+                      <img
+                        src="./img/stack-icons/tailwind.svg"
+                        alt="tailwind css"
+                      />
+                      <span>Tailwind</span>
+                    </div>
+                    <div class="col-6 col-md-4">
+                      <img
+                        src="./img/stack-icons/javascript.svg"
+                        alt="javascript"
+                      />
+                      <span>JavaScript</span>
+                    </div>
+                    <div class="col-6 col-md-4">
+                      <img
+                        src="./img/stack-icons/typescript.svg"
+                        alt="typescript"
+                      />
+                      <span>Typescript</span>
+                    </div>
+                    <div class="col-6 col-md-4">
+                      <img src="./img/stack-icons/react.svg" alt="react" />
+                      <span>React</span>
+                    </div>
+                    <div class="col-6 col-md-4">
+                      <img src="./img/stack-icons/next.svg" alt="next" />
+                      <span>Next</span>
+                    </div>
+                    <div class="col-6 col-md-4">
+                      <img src="./img/stack-icons/node.svg" alt="node" />
+                      <span>Node</span>
+                    </div>
+                    <div class="col-6 col-md-4">
+                      <img src="./img/stack-icons/git.svg" alt="git/github" />
+                      <span>Git / GitHub</span>
+                    </div>
+                    <div class="col-6 col-md-4">
+                      <img src="./img/stack-icons/csharp.svg" alt="C Sharp" />
+                      <span>C Sharp</span>
+                    </div>
+                  </div>
+                </section>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- ==== end About ==== -->
+
+        <!-- ==== Portfolio === -->
+        <section id="portfolio" class="">
+          <div class="container">
+            <h1 class="mb-md-5">PROJECTS</h1>
+            <div class="row row-cols-1 row-cols-lg-2 g-3">
+              <div>
+                <div
+                  class="project"
+                  data-aos="flip-up"
+                  data-aos-duration="1000"
+                >
+                  <img
+                    src="./img/portfolio/udemy-monster.jpg"
+                    alt="sunnysdie company"
+                  />
+                  <div class="details">
+                    <div
+                      class="position-absolute top-50 start-50 translate-middle bg-accen w-100"
+                    >
+                      <p class="text-center">
+                        Website that looks for 100% off Udemy coupons and shares
+                        them.
+                      </p>
+                      <div class="links_project">
+                        <a
+                          href="https://github.com/zougari47/udemy-monster"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          title="source code"
+                        >
+                          <i class="bi bi-github"></i>
+                        </a>
+                        <a
+                          href="https://udemy.monster"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          title="live demo"
+                        >
+                          <i class="bi bi-eye-fill"></i>
+                        </a>
+                      </div>
+                    </div>
+                    <div class="technology">
+                      <div class="row">
+                        <div class="col d-flex justify-content-center">
+                          <img
+                            src="./img/stack-icons/typescript.svg"
+                            alt="typescript"
+                            title="typescript"
+                          />
+                        </div>
+                        <div class="col d-flex justify-content-center">
+                          <img
+                            src="./img/stack-icons/tailwind.svg"
+                            alt="tailwind"
+                            title="tailwind"
+                          />
+                        </div>
+                        <div class="col d-flex justify-content-center">
+                          <img
+                            src="./img/stack-icons/next.svg"
+                            alt="next"
+                            title="next"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div>
+                <div
+                  class="project"
+                  data-aos="flip-up"
+                  data-aos-duration="1000"
+                >
+                  <img
+                    src="./img/portfolio/twitter-bot.jpg"
+                    alt="sunnysdie company"
+                  />
+                  <div class="details">
+                    <div
+                      class="position-absolute top-50 start-50 translate-middle bg-accen w-100"
+                    >
+                      <p class="text-center">
+                        Twitter bot retweet any tweet with hashtag
+                        #100DaysOfCodes
+                      </p>
+                      <div class="links_project">
+                        <a
+                          href="https://github.com/zougari47/twitter-bot"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          title="source code"
+                        >
+                          <i class="bi bi-github"></i>
+                        </a>
+                        <a
+                          href="https://twitter.com/_go47"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          title="live demo"
+                        >
+                          <i class="bi bi-eye-fill"></i>
+                        </a>
+                      </div>
+                    </div>
+                    <div class="technology">
+                      <div class="row">
+                        <div class="col d-flex justify-content-center">
+                          <img
+                            src="./img/stack-icons/node.svg"
+                            alt="node"
+                            title="node js"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div>
+                <div
+                  class="project"
+                  data-aos="flip-up"
+                  data-aos-duration="1000"
+                >
+                  <img
+                    src="./img/portfolio/advice-generator.jpg"
+                    alt="advice generator"
+                  />
+                  <div class="details">
+                    <div
+                      class="position-absolute top-50 start-50 translate-middle bg-accen w-100"
+                    >
+                      <p class="text-center">
+                        random advice generator using API
+                      </p>
+                      <div class="links_project">
+                        <a
+                          href="https://github.com/zougari47/frontendmentor-challenges/tree/main/apps/advice-generator-app"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          title="source code"
+                        >
+                          <i class="bi bi-github"></i>
+                        </a>
+                        <a
+                          href="https://advice-generator-app-fmc.vercel.app/"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          title="live demo"
+                        >
+                          <i class="bi bi-eye-fill"></i>
+                        </a>
+                      </div>
+                    </div>
+                    <div class="technology">
+                      <div class="row">
+                        <div class="col d-flex justify-content-center">
+                          <img
+                            src="./img/stack-icons/react.svg"
+                            alt="React"
+                            title="React"
+                          />
+                        </div>
+                        <div class="col d-flex justify-content-center">
+                          <img
+                            src="./img/stack-icons/tailwind.svg"
+                            alt="tailwind CSS"
+                            title="tailwind CSS"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div>
+                <div
+                  class="project"
+                  data-aos="flip-up"
+                  data-aos-duration="1000"
+                >
+                  <img src="./img/portfolio/quiz-app.jpg" alt="quiz app" />
+                  <div class="details">
+                    <div
+                      class="position-absolute top-50 start-50 translate-middle bg-accen w-100"
+                    >
+                      <p class="text-center">Quiz app using Open Trivia API</p>
+                      <div class="links_project">
+                        <a
+                          href="https://github.com/zougari47/quiz-app"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          title="source code"
+                        >
+                          <i class="bi bi-github"></i>
+                        </a>
+                        <a
+                          href="https://quiz-app-zougari47.vercel.app"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          title="live demo"
+                        >
+                          <i class="bi bi-eye-fill"></i>
+                        </a>
+                      </div>
+                    </div>
+                    <div class="technology">
+                      <div class="row">
+                        <div class="col d-flex justify-content-center">
+                          <img
+                            src="./img/stack-icons/next.svg"
+                            alt="next"
+                            title="next js"
+                          />
+                        </div>
+                        <div class="col d-flex justify-content-center">
+                          <img
+                            src="./img/stack-icons/materialui.svg"
+                            alt="material ui"
+                            title="material ui"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <p class="text-center mt-4">
+              <a
+                href="https://github.com/zougari47"
+                target="_blank"
+                class="btn btn-outline-accent btn-lg rounded-pill"
+              >
+                See more <i class="bi bi-github fs-4"></i>
+              </a>
+            </p>
+          </div>
+        </section>
+        <!-- ==== End Portfolio === -->
+
+        <!-- === Contact ====  -->
+        <div id="contact">
+          <section>
+            <div class="container">
+              <h1>CONTACT ME</h1>
+              <div class="row">
+                <div
+                  class="hello mb-4 mb-lg-0 col-12 col-lg-4 d-grid align-content-center"
+                  data-aos="fade-right"
+                  data-aos-duration="1000"
+                >
+                  <span>Have an idea ?</span>
+                  <p>Let's make it true!</p>
+
+                  <div class="mt-5 more_info">
+                    <p>
+                      <i class="bi bi-geo-alt text-accent me-2 fs-5"></i>
+                      Morocco
+                    </p>
+
+                    <p>
+                      <i class="bi bi-envelope-fill text-accent me-2 fs-5"></i>
+                      contact@ahmedzougari.com
+                    </p>
+                  </div>
+                </div>
+
+                <div
+                  class="contact_form col-12 col-lg-8 d-grid align-content-center"
+                >
+                  <form
+                    action=""
+                    id="contact_form"
+                    name="portfolio_form"
+                    data-aos="fade-left"
+                    data-aos-duration="1000"
+                  >
+                    <div class="row">
+                      <div class="col-12 col-lg-6">
+                        <div class="form-floating">
+                          <input
+                            type="text"
+                            name="name"
+                            id="name"
+                            placeholder="Your Name"
+                            class="form-control"
+                            required
+                          />
+                          <label for="name">Name</label>
+                          <div class="invalid-feedback small_label">
+                            Please enter at least 2 character
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-12 col-lg-6 mt-3 mt-lg-0">
+                        <div class="form-floating">
+                          <input
+                            type="email"
+                            name="email"
+                            id="email"
+                            placeholder="Your Email"
+                            class="form-control"
+                            required
+                          />
+                          <label for="email">Email</label>
+                          <div class="invalid-feedback small_label">
+                            Please enter a valid email
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-12 col-lg-12 mt-3">
+                        <div class="form-floating">
+                          <input
+                            type="text"
+                            name="subject"
+                            id="subject"
+                            placeholder="Subject"
+                            class="form-control"
+                            required
+                          />
+                          <label for="subject">Subject</label>
+                          <div class="invalid-feedback small_label">
+                            Please enter a subject
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-12 col-lg-12 mt-3">
+                        <div class="form-floating">
+                          <textarea
+                            name="message"
+                            id="message"
+                            placeholder="Message"
+                            class="form-control"
+                            rows="5"
+                            maxlength="400"
+                            style="max-height: 300px; min-height: 200px"
+                            required
+                          ></textarea>
+                          <label for="message">Message</label>
+                          <div class="invalid-feedback small_label">
+                            Please enter more than 5 words.
+                          </div>
+                        </div>
+
+                        <div
+                          class="valid-feedback text-end"
+                          style="font-family: sans-serif"
+                        ></div>
+                      </div>
+                      <div class="col-12 mt-3">
+                        <p class="thanks">Thank you. I will reply soon.</p>
+                      </div>
+                      <div class="mt-3 text-center text-lg-end">
+                        <button
+                          class="btn rounded-pill bg-accent text-white mx-auto"
+                          type="submit"
+                          id="send"
+                          disabled
+                        >
+                          Send Message
+                        </button>
+                      </div>
+                      <div
+                        class="spinner-border text-accent mx-auto"
+                        role="status"
+                      >
+                        <span class="visually-hidden">Loading...</span>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+        <!-- ==== End Contact ====  -->
+      </main>
+
+      <!-- ==== Start footer ====  -->
+      <footer id="footer">
+        <div class="container">
+          <div class="row row-cols-1 row-cols-lg-2">
+            <div>
+              Made with ❤️, By&nbsp;<span class="author"> Ahmed Zougari</span>,
+              Open sourced on&nbsp;
+              <a
+                href="https://github.com/zougari47/portfolio-template"
+                target="_blank"
+                ><i class="bi bi-github"></i
+              ></a>
+            </div>
+
+            <div class="text-center text-lg-end">
+              <a href="https://twitter.com/zougari47" target="_blank">
+                <i class="bi bi-twitter"></i>
+              </a>
+
+              <a href="https://github.com/zougari47" target="_blank">
+                <i class="bi bi-github"></i>
+              </a>
+
+              <a href="https://linkedin.com/in/zougari47" target="_blank">
+                <i class="bi bi-linkedin"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </footer>
+      <!-- ==== End footer ====  -->
+    </div>
+
+    <script type="module" src="./js/main.js" def></script>
+  </body>
+</html>

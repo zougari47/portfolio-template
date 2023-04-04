@@ -1,0 +1,55 @@
+#about {
+  .container > .row {
+    @include media($bp-lg) {
+      height: min(800px, 95vh);
+    }
+  }
+
+  #about_section {
+    h1 {
+      @include h1;
+    }
+  }
+
+  #skills_section {
+    @include media($bp-lg) {
+      margin-top: -17%;
+    }
+    @include media($bp-xl) {
+      margin-top: 0;
+    }
+
+    h1 {
+      @include h1;
+    }
+
+    img {
+      height: 2rem;
+      @include transition;
+
+      &:hover {
+        transform: scale(1.1);
+      }
+
+      @include media($bp-md) {
+        height: 2.5rem;
+      }
+
+      @include media($bp-xl) {
+        height: 3rem;
+      }
+    }
+
+    span {
+      font-style: italic;
+      font-weight: 500;
+      margin-left: 0.5rem;
+    }
+
+    .col-6 {
+      margin-bottom: 1.5rem;
+      display: flex;
+      align-items: center;
+    }
+  }
+}

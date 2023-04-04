@@ -1,0 +1,73 @@
+@import '../../node_modules/bootstrap/scss/functions';
+
+// overwrite Bootstrap variables
+@import './base/variables';
+
+// required Bootstrap stylesheets
+@import '../../node_modules/bootstrap/scss/variables';
+@import '../../node_modules/bootstrap/scss/maps';
+@import '../../node_modules/bootstrap/scss/mixins';
+
+// required Bootstrap components
+@import '../../node_modules/bootstrap/scss/root';
+@import '../../node_modules/bootstrap/scss/reboot';
+@import '../../node_modules/bootstrap/scss/containers';
+@import '../../node_modules/bootstrap/scss/grid';
+@import '../../node_modules/bootstrap/scss/transitions';
+@import '../../node_modules/bootstrap/scss/bootstrap-utilities.scss';
+@import '../../node_modules/bootstrap/scss/nav';
+@import '../../node_modules/bootstrap/scss/navbar';
+@import '../../node_modules//bootstrap/scss/forms';
+@import '../../node_modules/bootstrap/scss/buttons';
+@import '../../node_modules/bootstrap/scss/spinners';
+
+// Bootstrap icons
+$bootstrap-icons-font-src: url('../../node_modules/bootstrap-icons/font/fonts/bootstrap-icons.woff2')
+    format('woff2'),
+  url('../../node_modules/bootstrap-icons/font/fonts/bootstrap-icons.woff')
+    format('woff');
+@import '../../node_modules/bootstrap-icons/font/bootstrap-icons.scss';
+
+// Base
+@import './base/typography';
+@import './base/mixin';
+
+html {
+  scrollbar-color: var(--bs-accent) transparent;
+  font-size: 16px;
+
+  @include media($bp-md) {
+    font-size: 17px;
+  }
+
+  @include media($bp-xxl) {
+    font-size: 18px;
+  }
+}
+
+body {
+  @include font-primary;
+  color: var(--bs-secondary);
+  background: var(--bs-primary);
+}
+
+#root {
+  max-width: 100vw;
+  // position: relative;
+  overflow-x: hidden;
+}
+
+input,
+textarea {
+  background: transparent !important;
+  color: var(--bs-secondary) !important;
+}
+
+// Components
+@import './components/header';
+@import './components/hero';
+@import './components/about';
+@import './components/portfolio';
+@import './components/contact';
+@import './components/footer';
+@import './components/themesToggler';
