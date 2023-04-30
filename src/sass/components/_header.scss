@@ -8,9 +8,14 @@ header #header {
     @include font-secondary;
     font-style: italic;
     color: inherit;
+    max-width: 57%;
+    @include media($bp-lg) {
+      max-width: 37%;
+    }
 
-    span {
-      font-size: 16px;
+    & img {
+      width: 100%;
+      height: auto;
     }
   }
 
