@@ -3,7 +3,7 @@
 ## Table of contents
 
 - [Portfolio Template - Guide](#portfolio-template---guide)
-  - [Table of contents](#table-of-contents)
+  - [Table of Contents](#table-of-contents)
   - [Requirements](#requirements)
   - [Set Up The Environment](#set-up-the-environment)
   - [Customize Style](#customize-style)
@@ -29,11 +29,11 @@ Go to the link below for installation if you don't have installed yet.
 
 ## Set Up The Environment
 
-1. download the repository
-   ![](./src/img/docs/download.png)
+1. Download the repository
+   ![Download](./src/img/docs/download.png)
 
-2. unzip folder and open it with [VS Code](https://code.visualstudio.com/)
-3. Open terminal `Ctrl`+`'` & install dependencies by running `npm install` command
+2. Unzip folder and open it with [VS Code](https://code.visualstudio.com/)
+3. Open the terminal `Ctrl` + `'` and install dependencies by running the `npm install` command
 4. Run the command `npm run dev` to start live server
 5. `Ctrl` + click on `http://localhost:3000/`
 6. congratulation 🎉 you have setup the environment successfully
@@ -133,7 +133,7 @@ There is nothing to change here besides your logo. If you want the logo to chang
 
 To change the value of the typed effect go to `/src/js/typed.js` and put your headlines in the string array.
 
-📌 If you want the typed effect to keep looping, uncomment `loop:true` in the options
+📌 If you want the typed effect to keep looping, uncomment `loop: true` in the options
 
 ### Image
 
@@ -259,7 +259,7 @@ The project card HTML should look like below.
 ## Contact
 
 Sign up for [Email js](https://emailjs.com) and [IP Registry](https://ipregistry.co)  
-You must have .env file in src directory with these variables and put your own values:
+You must have a .env file in src directory with these variables and put your own values:
 
 ```env
 # EMAIL JS
@@ -274,6 +274,6 @@ VITE_IP_API_KEY=
 
 After you are done editing:
 
-- Stop dev mode with `Ctrl`+`C`
+- Stop dev mode with `Ctrl` + `C`
 - Run command `npm run build`
 - It will create a **dist** folder, This folder is what you should deploy
