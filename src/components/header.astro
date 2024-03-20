@@ -1,0 +1,87 @@
+---
+import { Image } from 'astro:assets'
+
+import { links } from '@/data.json'
+---
+
+<header class="sticky-top">
+  <nav class="navbar navbar-expand-lg navbar-light py-3" id="header">
+    <div class="container">
+      <a class="navbar-brand" href="/">
+        <Image
+          src="/img/logo.svg"
+          width={150}
+          height={50}
+          alt="logo"
+          loading="eager"
+        />
+      </a>
+
+      <button id="theme-btn" class="align-self-center ms-auto me-3">
+        <i class="bi bi-moon-fill"></i>
+        <i class="bi bi-brightness-high-fill"></i>
+      </button>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#toggleMobileMenu"
+        aria-controls="toggleMobileMenu"
+        aria-expanded="false"
+        aria-table="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="toggleMobileMenu">
+        <ul class="navbar-nav ms-lg-auto">
+          <li class="nav-item">
+            <a href="#hero" aria-current="page" class="nav-link active">Home</a>
+          </li>
+          <li class="nav-item">
+            <a href="#about" class="nav-link">About</a>
+          </li>
+          <li class="nav-item">
+            <a href="#portfolio" class="nav-link">Projects</a>
+          </li>
+          <li class="nav-item">
+            <a href="#contact" class="nav-link">Contact</a>
+          </li>
+          <li class="nav-item">
+            <a href={links.blog} target="_blank" class="nav-link">Blog</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<script>
+  // navbar + scroll spy
+  import { Collapse, ScrollSpy } from 'bootstrap'
+  // dark/light mode
+  import '@/assets/js/themes'
+
+  // hide mobile menu when clicking on a link
+  document.querySelectorAll('.nav-link').forEach(navLink =>
+    navLink.addEventListener('click', () => {
+      const toggler = document.querySelector('.navbar-toggler')
+      toggler?.classList.add('collapsed')
+      toggler?.setAttribute('aria-expanded', 'false')
+      document.querySelector('#toggleMobileMenu')?.classList.remove('show')
+    })
+  )
+
+  // hide header on scroll down / show on scroll up
+  let prevScrollPos = window.scrollY
+  const header = document.querySelector('.sticky-top')
+  window.onscroll = function () {
+    let currentScrollPos = window.scrollY
+    if (prevScrollPos > currentScrollPos) {
+      header?.classList.add('sticky-top')
+    } else {
+      header?.classList.remove('sticky-top')
+    }
+    prevScrollPos = currentScrollPos
+  }
+</script>

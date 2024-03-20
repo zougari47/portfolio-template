@@ -1,0 +1,80 @@
+---
+import { projects, links } from '@/data.json'
+import { Image } from 'astro:assets'
+
+// <img
+//                 src={project.imageSrc}
+//                 alt={project.altText}
+//                 loading="lazy"
+//               />
+---
+
+<section id="portfolio" class="">
+  <div class="container">
+    <h1 class="mb-md-5">PROJECTS</h1>
+    <div class="row row-cols-1 row-cols-lg-2 g-3">
+      {
+        projects.map(project => (
+          <div>
+            <div class="project" data-aos="flip-up" data-aos-duration="1000">
+              <Image
+                src={project.imageSrc}
+                alt={project.altText}
+                width={700}
+                height={700}
+                loading="lazy"
+              />
+              <div class="details">
+                <div class="position-absolute top-50 start-50 translate-middle bg-accen w-100">
+                  <p class="text-center">{project.description}</p>
+                  <div class="links_project">
+                    <a
+                      href={project.imageSrc}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      title="source code"
+                      aria-label="source code"
+                    >
+                      <i class="bi bi-github" />
+                    </a>
+                    <a
+                      href={project.liveDemoURL}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      title="live demo"
+                      aria-label="live demo"
+                    >
+                      <i class="bi bi-eye-fill" />
+                    </a>
+                  </div>
+                </div>
+                <div class="technology">
+                  <div class="row">
+                    {project.technologies.map(tech => (
+                      <div class="col d-flex justify-content-center">
+                        <img
+                          src={`/img/stack-icons/${tech}.svg`}
+                          alt={tech}
+                          title={tech.charAt(0).toUpperCase() + tech.slice(1)}
+                        />
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        ))
+      }
+    </div>
+    <p class="text-center mt-4">
+      <a
+        href={links.github}
+        target="_blank"
+        class="btn btn-outline-accent btn-lg rounded-pill"
+      >
+        See more <i class="bi bi-github fs-4"></i>
+      </a>
+    </p>
+  </div>
+</section>

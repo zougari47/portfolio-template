@@ -1,0 +1,87 @@
+---
+import { links, fullName } from '@/data.json'
+---
+
+<div id="hero">
+  <div class="container">
+    <div class="row">
+      <div class="col-12 col-lg-6 mt-lg-0 d-grid align-content-center">
+        <section
+          class="text-center text-lg-start"
+          data-aos="zoom-in"
+          data-aos-delay="1000"
+          data-aos-duration="1000"
+        >
+          <p>Hello! 👋 My name is</p>
+          <h1>{fullName}</h1>
+          <p><span id="headline"></span></p>
+          <div class="social-links mx-auto mx-lg-0">
+            <div class="row">
+              <div class="col-3">
+                <a
+                  href="mailto:olivia.davis@gmail.com"
+                  target="_blank"
+                  aria-label="mail"
+                >
+                  <i class="bi bi-envelope-fill"></i>
+                </a>
+              </div>
+              <div class="col-3">
+                <a href={links.github} target="_blank" aria-label="github">
+                  <i class="bi bi-github"></i>
+                </a>
+              </div>
+              <div class="col-3">
+                <a href={links.linkedin} target="_blank" aria-label="linkedin">
+                  <i class="bi bi-linkedin"></i>
+                </a>
+              </div>
+              <div class="col-3">
+                <a href={links.twitter} target="_blank" aria-label="twitter">
+                  <i class="bi bi-twitter"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+      <div class="col-12 col-lg-6 d-grid align-content-center">
+        <div
+          class="img-container"
+          id="img-wrapper"
+          data-aos="fade-left"
+          data-aos-duration="1500"
+          data-aos-delay="2000"
+        >
+          <div id="canvas"></div>
+
+          <div class="curtain">
+            <img
+              src="./img/me.jpg"
+              crossorigin=""
+              data-sampler="simplePlaneTexture"
+              width="400"
+              height="400"
+              alt="Olivia Davis"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  import Typed from 'typed.js'
+  import '@/assets/js/curtain.js'
+
+  var options = {
+    strings: ["I'm a Fullstack Developer", 'I Design  Websites', 'I Fix Bugs'],
+    typeSpeed: 120,
+    backSpeed: 50,
+    backDelay: 1500,
+    loop: true,
+  }
+
+  var typed = new Typed('#headline', options)
+</script>

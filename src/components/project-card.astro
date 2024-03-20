@@ -1,0 +1,170 @@
+---
+/*
+  Project card component to show a project with its details
+*/
+
+import type { HTMLAttributes } from 'astro/types'
+import { Image } from 'astro:assets'
+
+interface Props extends HTMLAttributes<'div'> {
+  name: string
+  description: string
+  img: string
+  links: {
+    source: string
+    demo: string
+  }
+  technologies: {
+    icon: string
+    name: string
+  }[]
+}
+
+const { name, description, img, links, technologies, ...others } =
+  Astro.props as Props
+---
+
+<div class="project">
+  <img src={img} alt="" />
+  <div class="details">
+    <div
+      class="position-absolute top-50 start-50 translate-middle bg-accen w-100"
+    >
+      <p class="text-center">describe your project here</p>
+      <div class="links_project">
+        <a
+          href="link-of-source-code"
+          target="_blank"
+          rel="noopener noreferrer"
+          title="source code"
+        >
+          <i class="bi bi-github"></i>
+        </a>
+        <a
+          href="link-for-live-demo"
+          target="_blank"
+          rel="noopener noreferrer"
+          title="live demo"
+        >
+          <i class="bi bi-eye-fill"></i>
+        </a>
+      </div>
+    </div>
+    <div class="technology">
+      <div class="row">
+        <div class="col d-flex justify-content-center">
+          <img
+            src="./img/stack-icons/technology-1.svg"
+            alt="html"
+            title="html"
+          />
+        </div>
+        <div class="col d-flex justify-content-center">
+          <img
+            src="./img/stack-icons/technology-2.svg"
+            alt="technology-2"
+            title="technology-2"
+          />
+        </div>
+        <div class="col d-flex justify-content-center">
+          <img
+            src="./img/stack-icons/technology-3.svg"
+            alt="technology-3"
+            title="technology-3"
+          />
+        </div>
+        <div class="col d-flex justify-content-center">
+          <img
+            src="./img/stack-icons/technology-4.svg"
+            alt="technology-4"
+            title="technology-4"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style lang="scss">
+  .project {
+    position: relative;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+    &:hover {
+      .details {
+        clip-path: circle(141.1% at 0 0);
+      }
+    }
+
+    img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+
+    .details {
+      width: 100%;
+      height: 100%;
+      // @include transition;
+      translate: 1s ease all;
+      background-color: rgba($color: #000000, $alpha: 0.4);
+      color: white;
+      clip-path: circle(0% at 0 0);
+      // clip-path: circle(141.1% at 0 0);
+
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 5;
+
+      p {
+        padding-left: 5%;
+        padding-right: 5%;
+
+        // @include media($bp-lg) {
+        //   font-size: 1.5rem;
+        // }
+      }
+
+      .links_project {
+        width: 20%;
+        font-size: 1.5rem;
+        // @include mx-auto;
+        margin-inline: auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        a {
+          text-decoration: none;
+
+          i {
+            color: white;
+            // @include transition;
+
+            &:hover {
+              color: var(--bs-accent);
+            }
+          }
+        }
+      }
+
+      .technology {
+        min-width: 50%;
+        position: absolute;
+        bottom: 2%;
+        left: 0;
+        right: 0;
+        margin-inline: auto;
+        // filter: blur(20px);
+        // @include mx-auto;
+
+        img {
+          width: 2rem;
+          display: block;
+        }
+      }
+    }
+  }
+</style>

@@ -1,0 +1,84 @@
+// 1. Include functions first (so you can manipulate colors, SVGs, calc, etc)
+@import 'bootstrap/scss/functions';
+
+// 2. Include any default variable overrides here
+@import './base/variables';
+
+// 3. Include remainder of required Bootstrap stylesheets (including any separate color mode stylesheets)
+@import 'bootstrap/scss/variables';
+@import 'bootstrap/scss/variables-dark';
+
+// 4. Include any default map overrides here
+
+// 5. Include remainder of required parts
+@import 'bootstrap/scss/maps';
+@import 'bootstrap/scss/mixins';
+@import 'bootstrap/scss/root';
+
+// 6. Optionally include any other parts as needed
+@import 'bootstrap/scss/reboot';
+@import 'bootstrap/scss/containers';
+@import 'bootstrap/scss/grid';
+@import 'bootstrap/scss/transitions';
+@import 'bootstrap/scss/bootstrap-utilities';
+// @import '../../../node_modules/bootstrap/scss/bootstrap-utilities.scss';
+@import 'bootstrap/scss/nav';
+@import 'bootstrap/scss/navbar';
+@import 'bootstrap/scss/forms';
+@import 'bootstrap/scss/buttons';
+@import 'bootstrap/scss/spinners';
+
+// 7. Optionally include utilities API last to generate classes based on the Sass map in `_utilities.scss`
+// @import 'bootstrap/scss/utilities/api';
+
+// 8. Add additional custom code here
+// Bootstrap icons
+$bootstrap-icons-font-src: url('../../../node_modules/bootstrap-icons/font/fonts/bootstrap-icons.woff2')
+    format('woff2'),
+  url('../../../node_modules/bootstrap-icons/font/fonts/bootstrap-icons.woff')
+    format('woff');
+@import '../../../node_modules/bootstrap-icons/font/bootstrap-icons.scss';
+
+// Base
+@import './base/typography';
+@import './base/mixin';
+
+html {
+  scrollbar-color: var(--bs-accent) transparent;
+  font-size: 16px;
+
+  @include media($bp-md) {
+    font-size: 17px;
+  }
+
+  @include media($bp-xxl) {
+    font-size: 18px;
+  }
+}
+
+body {
+  @include font-primary;
+  color: var(--bs-secondary);
+  background: var(--bs-primary);
+}
+
+#root {
+  max-width: 100vw;
+  // position: relative;
+  overflow-x: hidden;
+}
+
+input,
+textarea {
+  background: transparent !important;
+  color: var(--bs-secondary) !important;
+}
+
+// Components
+@import './components/header';
+@import './components/hero';
+@import './components/about';
+@import './components/portfolio';
+@import './components/contact';
+@import './components/footer';
+@import './components/themesToggler';

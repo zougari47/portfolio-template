@@ -1,0 +1,154 @@
+---
+import { email, location } from '@/data.json'
+---
+
+<div id="contact">
+  <section>
+    <div class="container">
+      <h1>CONTACT ME</h1>
+      <div class="row">
+        <div
+          class="hello mb-4 mb-lg-0 col-12 col-lg-4 d-grid align-content-center"
+          data-aos="fade-right"
+          data-aos-duration="1000"
+        >
+          <span>Ready to Innovate?</span>
+          <p>Let's Bring Your Vision to Life!</p>
+
+          <div class="mt-5 more_info">
+            <p>
+              <i class="bi bi-geo-alt text-accent me-2 fs-5"></i>
+              {location}
+            </p>
+
+            <p>
+              <i class="bi bi-envelope-fill text-accent me-2 fs-5"></i>
+              {email}
+            </p>
+          </div>
+        </div>
+
+        <div class="contact_form col-12 col-lg-8 d-grid align-content-center">
+          <form
+            id="contact_form"
+            name="portfolio_form"
+            data-aos="fade-left"
+            data-aos-duration="1000"
+            novalidate
+          >
+            <div class="row">
+              <div class="col-12 col-lg-6">
+                <div class="form-floating">
+                  <input
+                    type="text"
+                    name="name"
+                    id="name"
+                    placeholder="Your Name"
+                    class="form-control"
+                    required
+                  />
+                  <label for="name">Name</label>
+                  <div class="invalid-feedback small_label">
+                    Please enter at least 2 character
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-lg-6 mt-3 mt-lg-0">
+                <div class="form-floating">
+                  <input
+                    type="email"
+                    name="email"
+                    id="email"
+                    placeholder="Your Email"
+                    class="form-control"
+                    required
+                  />
+                  <label for="email">Email</label>
+                  <div class="invalid-feedback small_label">
+                    Please enter a valid email
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-lg-12 mt-3">
+                <div class="form-floating">
+                  <input
+                    type="text"
+                    name="subject"
+                    id="subject"
+                    placeholder="Subject"
+                    class="form-control"
+                    required
+                  />
+                  <label for="subject">Subject</label>
+                  <div class="invalid-feedback small_label">
+                    Please enter a subject
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-lg-12 mt-3">
+                <div class="form-floating">
+                  <textarea
+                    name="message"
+                    id="message"
+                    placeholder="Message"
+                    class="form-control"
+                    rows="5"
+                    maxlength="400"
+                    style="max-height: 300px; min-height: 200px"
+                    required></textarea>
+                  <label for="message">Message</label>
+                  <div class="invalid-feedback small_label">
+                    Please enter more than 5 words.
+                  </div>
+                </div>
+
+                <div class="valid-feedback text-end d-block"></div>
+              </div>
+              <div class="col-12 mt-3">
+                <p class="thanks">Thank you. I will reply soon.</p>
+              </div>
+              <div class="mt-3">
+                <button
+                  class="btn btn-lg d-block w-100 bg-accent text-white mx-auto"
+                  type="submit"
+                  id="send"
+                  disabled
+                >
+                  Send
+                  <i class="bi bi-send"></i>
+                </button>
+              </div>
+              <div class="spinner-border text-accent mx-auto" role="status">
+                <span class="visually-hidden">Loading...</span>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<style>
+  .form-control.is-valid {
+    border-color: var(--bs-form-valid-border-color);
+    padding-right: calc(1.5em + 0.75rem);
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='%23198754' d='M2.3 6.73.6 4.53c-.4-1.04.46-1.4 1.1-.8l1.1 1.4 3.4-3.8c.6-.63 1.6-.27 1.2.7l-4 4.6c-.43.5-.8.4-1.1.1z'/%3e%3c/svg%3e") !important;
+    background-repeat: no-repeat !important;
+    background-position: right calc(0.375em + 0.1875rem) center !important;
+    background-size: calc(0.75em + 0.375rem) calc(0.75em + 0.375rem) !important;
+  }
+
+  .form-control.is-invalid {
+    border-color: var(--bs-form-invalid-border-color);
+    padding-right: calc(1.5em + 0.75rem);
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12' width='12' height='12' fill='none' stroke='%23dc3545'%3e%3ccircle cx='6' cy='6' r='4.5'/%3e%3cpath stroke-linejoin='round' d='M5.8 3.6h.4L6 6.5z'/%3e%3ccircle cx='6' cy='8.2' r='.6' fill='%23dc3545' stroke='none'/%3e%3c/svg%3e") !important;
+    background-repeat: no-repeat !important;
+    background-position: right calc(0.375em + 0.1875rem) center !important;
+    background-size: calc(0.75em + 0.375rem) calc(0.75em + 0.375rem) !important;
+  }
+</style>
+
+<script>
+  import '@/assets/js/contact'
+</script>

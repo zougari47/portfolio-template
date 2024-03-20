@@ -1,0 +1,54 @@
+---
+import { skills, description } from '@/data.json'
+---
+
+<div id="about">
+  <div class="container">
+    <div class="row">
+      <div class="col-12 col-lg-6 d-grid align-content-center">
+        <section
+          id="about_section"
+          class="my-5 my-lg-0"
+          data-aos="fade-right"
+          data-aos-mirror="true"
+          data-aos-duration="1500"
+        >
+          <h1>ABOUT ME</h1>
+          <p>
+            {description[0]}
+          </p>
+          <p>
+            {description[1]}
+          </p>
+          <p>
+            {description[2]}
+          </p>
+        </section>
+      </div>
+      <div class="col-12 col-lg-6 d-grid align-content-center">
+        <section
+          id="skills_section"
+          class="mb-5 mb-xl-0"
+          data-aos="fade-left"
+          data-aos-duration="1000"
+        >
+          <h1>SKILLS</h1>
+          <div class="row">
+            {
+              skills.map(skill => (
+                <div class="col-6 col-md-4">
+                  <img
+                    loading="lazy"
+                    src={`/img/stack-icons/${skill}.svg`}
+                    alt={skill.toUpperCase()}
+                  />
+                  <span>{skill.toUpperCase()}</span>
+                </div>
+              ))
+            }
+          </div>
+        </section>
+      </div>
+    </div>
+  </div>
+</div>

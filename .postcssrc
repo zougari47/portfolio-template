@@ -1,7 +1,0 @@
-{
-  "plugins": {
-    "postcss-discard-comments": {
-      "removeAll": true
-    }
-  }
-}

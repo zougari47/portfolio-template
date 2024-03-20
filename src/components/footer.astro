@@ -1,0 +1,36 @@
+---
+import { links } from '@/data.json'
+---
+
+<footer id="footer">
+  <div class="container">
+    <div class="row row-cols-1 row-cols-lg-2">
+      <div>
+        Made with ❤️, By&nbsp;<a
+          href="https://ahmedzougari.com"
+          target="_blank"
+          class="primary-link">Ahmed Zougari</a
+        >, Open sourced on&nbsp;
+        <a
+          href="https://github.com/zougari47/portfolio-template"
+          target="_blank"
+          aria-label="github code source"><i class="bi bi-github"></i></a
+        >
+      </div>
+
+      <div class="text-center text-lg-end">
+        <a href={links.twitter} target="_blank" aria-label="twitter">
+          <i class="bi bi-twitter"></i>
+        </a>
+
+        <a href={links.github} target="_blank" aria-label="github">
+          <i class="bi bi-github"></i>
+        </a>
+
+        <a href={links.linkedin} target="_blank" aria-label="linkedin">
+          <i class="bi bi-linkedin"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+</footer>
