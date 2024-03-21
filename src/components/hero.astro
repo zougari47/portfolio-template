@@ -1,5 +1,5 @@
 ---
-import { links, fullName } from '@/data.json'
+import { links, fullName, typedText } from '@/data.json'
 ---
 
 <div id="hero">
@@ -14,7 +14,9 @@ import { links, fullName } from '@/data.json'
         >
           <p>Hello! 👋 My name is</p>
           <h1>{fullName}</h1>
-          <p><span id="headline"></span></p>
+          <astro-typewriter data-texts={typedText}>
+            <p><span id="headline"></span></p>
+          </astro-typewriter>
           <div class="social-links mx-auto mx-lg-0">
             <div class="row">
               <div class="col-3">
@@ -74,14 +76,26 @@ import { links, fullName } from '@/data.json'
 <script>
   import Typed from 'typed.js'
   import '@/assets/js/curtain.js'
+  import { typedText } from '@/data.json'
 
-  var options = {
-    strings: ["I'm a Fullstack Developer", 'I Design  Websites', 'I Fix Bugs'],
-    typeSpeed: 120,
-    backSpeed: 50,
-    backDelay: 1500,
-    loop: true,
+  class MyTypeWriter extends HTMLElement {
+    constructor() {
+      super()
+
+      // Read the message from the data attribute.
+      const strings = this.dataset.texts.split(',')
+
+      const options = {
+        strings,
+        typeSpeed: 120,
+        backSpeed: 50,
+        backDelay: 1500,
+        loop: true,
+      }
+
+      var typed = new Typed('#headline', options)
+    }
   }
 
-  var typed = new Typed('#headline', options)
+  customElements.define('astro-typewriter', MyTypeWriter)
 </script>

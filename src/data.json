@@ -1,5 +1,20 @@
 {
   "fullName": "Olivia Davis",
+  "metadata": {
+    "title": "Olivia Davis - FullStack Developer",
+    "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptas quod magni enim facilis porro, repellat soluta distinctio deserunt veritatis nam molestiae eius nostrum natus dolor? Voluptates in iusto aspernatur illum",
+    "keywords": [
+      "Olivia Davis",
+      "New York",
+      "FullStack Developer",
+      "TypeScript",
+      "JavaScript",
+      "React",
+      "Angular",
+      "Node.js"
+    ]
+  },
+  "typedText": ["Full Stack Guru", "Design Maestro", "Bug Resolver"],
   "email": "oliviadavis@example.com",
   "location": "New York, USA",
   "description": [

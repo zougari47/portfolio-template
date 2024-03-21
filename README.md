@@ -46,6 +46,68 @@
 
 ## How To Use 🔧
 
+📍If you want to use the previous version (html/vite) you can find it in this branch [v1](https://github.com/zougari47/portfolio-template/tree/v1)
+
+## Getting Started with This Template
+
+To start using this template, follow these steps:
+
+1. **Fork Repository:**
+
+2. **Edit Template:**
+
+   - Modify the `data.json` file and include your images.
+
+3. **Set Up Contact Form:**
+
+   Ensure the contact form functionality:
+
+   - Create accounts on [Email.js](https://emailjs.com) and [IP Registry](https://ipregistry.co).
+   - Create a `.env` file in the project root with the following variables:
+     ```env
+     PUBLIC_EMAILJS_ID=your_emailjs_id
+     PUBLIC_CONTACT_SERVICE=your_contact_service
+     PUBLIC_TEMPLATE_ID=your_template_id
+     PUBLIC_IP_API_KEY=your_ip_api_key
+     ```
+   - Replace `your_emailjs_id`, `your_contact_service`, `your_template_id`, and `your_ip_api_key` with your actual values.
+
+4. **Install Dependencies & Run Project:**
+
+```
+pnpm install
+
+pnpm dev
+```
+
+5. **Deployment**
+
+You can easily deploy with [Vercel](https://vercel.com) or [Netlify](https://netlify.com).
+
+🎉 By following these steps, you'll be able to customize, run, and deploy this template effectively.
+
+## Customization 🎨
+
+```
+
+
+By following these steps, you'll be able to customize and utilize this template effectively.
+
+<!-- To start using this template follow this :
+
+- Fork repository
+- Start editing template by change the data.json file and add your images
+- To make sure contact form working first you have to create account on [Email js](https://emailjs.com) and [IP Registry](https://ipregistry.co) then add create a .env file in root of project like below with your values
+
+```
+
+PUBLIC_EMAILJS_ID=
+PUBLIC_CONTACT_SERVICE=
+PUBLIC_TEMPLATE_ID=
+PUBLIC_IP_API_KEY=
+
+```-->
+
 ## License 📄
 
 This project is licensed under the MIT License - see the [LICENSE.md](./LICENSE) file for details.
@@ -53,3 +115,4 @@ This project is licensed under the MIT License - see the [LICENSE.md](./LICENSE)
 ## Sponsor 💛
 
 Give a ⭐ if you like this project!
+```

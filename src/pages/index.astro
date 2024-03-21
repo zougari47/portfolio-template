@@ -1,16 +1,12 @@
 ---
+import { metadata } from '@/data.json'
+
 import Header from '@/components/header.astro'
 import Hero from '@/components/hero.astro'
 import About from '@/components/about.astro'
 import Portfolio from '@/components/portfolio.astro'
 import Contact from '@/components/contact.astro'
 import Footer from '@/components/footer.astro'
-
-// interface Props {
-//   title: string
-// }
-
-// const { title } = Astro.props
 
 import '@/assets/sass/style.scss'
 import '@fontsource/finger-paint'
@@ -21,11 +17,15 @@ import '@fontsource-variable/raleway'
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="description" content="Astro description" />
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
-    <title>Olivia Davis - FullStack Developer</title>
+    <meta name="keywords" content={metadata.keywords.join(', ')} />
+    <meta name="description" content={metadata.description} />
+    <meta name="author" content="Ahmed Zougari" />
+    <meta property="og:title" content={metadata.title} />
+    <meta property="og:description" content={metadata.description} />
+    <title>{metadata.title}</title>
   </head>
   <body
     data-bs-spy="scroll"
