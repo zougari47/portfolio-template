@@ -61,12 +61,11 @@ import { links, fullName, typedText } from '@/data.json'
             <img
               src="./img/me.webp"
               loading="lazy"
-              decoding="async"
-              crossorigin=""
               data-sampler="simplePlaneTexture"
               width="400"
               height="400"
               alt="Olivia Davis"
+              id="me"
             />
           </div>
         </div>
@@ -77,7 +76,7 @@ import { links, fullName, typedText } from '@/data.json'
 
 <script>
   import Typed from 'typed.js'
-  import '@/assets/js/curtain.js'
+  import '@/assets/js/curtain.js' // uncomment if you want to use the curtains effect and make sure you remove lazy loading and async encoding from the image (don'froget it's bad for performance)
   import { typedText } from '@/data.json'
 
   class MyTypeWriter extends HTMLElement {
