@@ -17,7 +17,12 @@ import { links } from '@/data.json'
         />
       </a>
 
-      <button id="theme-btn" class="align-self-center ms-auto me-3">
+      <button
+        id="theme-btn"
+        class="align-self-center ms-auto me-3"
+        aria-label="Toggle light/dark mode"
+        aria-pressed="false"
+      >
         <i class="bi bi-moon-fill"></i>
         <i class="bi bi-brightness-high-fill"></i>
       </button>
@@ -28,7 +33,7 @@ import { links } from '@/data.json'
         data-bs-target="#toggleMobileMenu"
         aria-controls="toggleMobileMenu"
         aria-expanded="false"
-        aria-table="Toggle navigation"
+        aria-lable="Toggle navigation"
       >
         <span class="navbar-toggler-icon"></span>
       </button>

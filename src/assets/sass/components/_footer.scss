@@ -18,8 +18,10 @@
 
       .author {
         position: relative;
-        // font-weight: bold;
+        font-weight: bold;
         font-style: italic;
+        text-decoration: unset;
+        color: #e0e0e0;
       }
 
       a:last-child {

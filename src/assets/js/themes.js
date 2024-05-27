@@ -37,6 +37,8 @@ function applyTheme(theme) {
 }
 
 function toggleThemes() {
+  themesBtn.setAttribute('aria-presented', 'true')
+
   if (isLight) {
     applyTheme(themes.dark)
     moonIcon.style.display = 'none'
