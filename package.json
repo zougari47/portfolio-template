@@ -1,26 +1,25 @@
 {
-  "name": "astro-portfolio",
+  "name": "rust",
   "type": "module",
   "version": "0.0.1",
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
-    "build": "astro build",
+    "build": "astro check && astro build",
     "preview": "astro preview",
     "astro": "astro"
   },
   "dependencies": {
-    "@emailjs/browser": "^4.3.3",
-    "@fontsource-variable/raleway": "^5.0.18",
-    "@fontsource/finger-paint": "^5.0.18",
-    "aos": "^2.3.4",
-    "astro": "^4.4.13",
-    "bootstrap": "^5.3.3",
-    "bootstrap-icons": "^1.11.3",
-    "curtainsjs": "^8.1.5",
-    "typed.js": "^2.1.0"
+    "@astrojs/check": "^0.7.0",
+    "@astrojs/tailwind": "^5.1.0",
+    "astro": "^4.11.1",
+    "flowbite": "^2.4.1",
+    "tailwindcss": "^3.4.4",
+    "typescript": "^5.5.2"
   },
   "devDependencies": {
-    "sass": "^1.71.1"
+    "prettier": "^3.3.2",
+    "prettier-plugin-astro": "^0.14.0",
+    "prettier-plugin-tailwindcss": "^0.6.5"
   }
 }

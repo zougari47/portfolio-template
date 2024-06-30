@@ -1,54 +1,25 @@
 ---
-import { metadata } from '@/data.json'
-
-import Header from '@/components/header.astro'
+import Head from '@/components/head.astro'
+import Nav from '@/components/nav.astro'
 import Hero from '@/components/hero.astro'
 import About from '@/components/about.astro'
-import Portfolio from '@/components/portfolio.astro'
+import Projects from '@/components/projects.astro'
 import Contact from '@/components/contact.astro'
 import Footer from '@/components/footer.astro'
-
-import '@/assets/sass/style.scss'
-import '@fontsource/finger-paint'
-import '@fontsource-variable/raleway'
 ---
 
-<!doctype html>
-<html lang="en">
+<html lang='en'>
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="generator" content={Astro.generator} />
-    <meta name="keywords" content={metadata.keywords.join(', ')} />
-    <meta name="description" content={metadata.description} />
-    <meta name="author" content="Ahmed Zougari" />
-    <meta property="og:title" content={metadata.title} />
-    <meta property="og:description" content={metadata.description} />
-    <title>{metadata.title}</title>
+    <Head />
   </head>
-  <body
-    data-bs-spy="scroll"
-    data-bs-target="#toggleMobileMenu"
-    data-bs-offset="0"
-  >
-    <Header />
-    <div id="root">
+  <body>
+    <Nav />
+    <main class='container'>
       <Hero />
-      <main>
-        <About />
-        <Portfolio />
-        <Contact />
-      </main>
+      <About />
+      <Projects />
+      <Contact />
       <Footer />
-    </div>
+    </main>
   </body>
 </html>
-
-<script>
-  import AOS from 'aos'
-  import '../../node_modules/aos/dist/aos.css'
-  AOS.init({
-    once: true,
-  })
-</script>
