@@ -1,102 +1,90 @@
 ---
-import { links, fullName, typedText } from '@/data.json'
+import { Image } from 'astro:assets'
+import MyPicture from '@/assets/me.png'
+import { fullName, rotatingWords } from '@/data.json'
+
+// const animationClass = `animate-text-slide-${rotatingWords.length}`
+
+const animationClass = (number: number) => `animate-text-slide-${number}`
+const words = [...rotatingWords, rotatingWords[0]]
+
+const classMap = {
+  1: 'text-red-600',
+  2: 'text-blue-600',
+  3: 'text-yellow-600',
+  4: 'text-purple-600',
+  5: 'text-orange-600',
+}
 ---
 
-<div id="hero">
-  <div class="container">
-    <div class="row">
-      <div class="col-12 col-lg-6 mt-lg-0 d-grid align-content-center">
-        <section
-          class="text-center text-lg-start"
-          data-aos="zoom-in"
-          data-aos-delay="1000"
-          data-aos-duration="1000"
-        >
-          <p>Hello! 👋 My name is</p>
-          <h1>{fullName}</h1>
-          <astro-typewriter data-texts={typedText}>
-            <p><span id="headline"></span></p>
-          </astro-typewriter>
-          <div class="social-links mx-auto mx-lg-0">
-            <div class="row">
-              <div class="col-3">
-                <a
-                  href="mailto:olivia.davis@gmail.com"
-                  target="_blank"
-                  aria-label="mail"
-                >
-                  <i class="bi bi-envelope-fill"></i>
-                </a>
-              </div>
-              <div class="col-3">
-                <a href={links.github} target="_blank" aria-label="github">
-                  <i class="bi bi-github"></i>
-                </a>
-              </div>
-              <div class="col-3">
-                <a href={links.linkedin} target="_blank" aria-label="linkedin">
-                  <i class="bi bi-linkedin"></i>
-                </a>
-              </div>
-              <div class="col-3">
-                <a href={links.twitter} target="_blank" aria-label="twitter">
-                  <i class="bi bi-twitter"></i>
-                </a>
-              </div>
-            </div>
-          </div>
-        </section>
+<section class='min-h-screen bg-white dark:bg-gray-900'>
+  <div
+    class='mx-auto grid max-w-screen-xl px-4 py-8 lg:grid-cols-12 lg:gap-8 lg:py-16 xl:gap-0'>
+    <div class='mr-auto place-self-center lg:col-span-6'>
+      <h1
+        class='mb-4 max-w-2xl text-4xl font-extrabold leading-none tracking-tight md:text-5xl xl:text-6xl dark:text-white'>
+        <span>I'm {fullName.split(' ')[0]} and I </span>
+        <span>specialize in</span>
+      </h1>
+      <div class='mb-6 text-3xl font-extrabold [text-wrap:balance] md:text-6xl'>
+        <span
+          class='via inline-flex h-[calc(theme(fontSize.3xl)*theme(lineHeight.tight))] flex-col overflow-hidden bg-primary-500 bg-gradient-to-tr from-primary-700 to-primary-400 bg-clip-text text-transparent md:h-[calc(theme(fontSize.6xl)*theme(lineHeight.tight))]'>
+          <ul
+            class='animate-text-slide-3 block text-left leading-tight [&_li]:block'>
+            {
+              words.map((word, i) => (
+                <li
+                  {...(word === words.at(-1) && i > 0
+                    ? { 'aria-hidden': 'true' }
+                    : {})}>
+                  {word}
+                </li>
+              ))
+            }
+          </ul>
+        </span>
       </div>
-      <div class="col-12 col-lg-6 d-grid align-content-center">
-        <div
-          class="img-container"
-          id="img-wrapper"
-          data-aos="fade-left"
-          data-aos-duration="1500"
-          data-aos-delay="2000"
+      <a
+        href='#'
+        class='mr-3 inline-flex items-center justify-center rounded-lg bg-primary-700 px-5 py-3 text-center text-base font-medium text-white hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 dark:focus:ring-primary-900'>
+        Hire Me
+        <svg
+          class='-mr-1 ml-2 h-5 w-5'
+          fill='currentColor'
+          viewBox='0 0 20 20'
+          xmlns='http://www.w3.org/2000/svg'
+          ><path
+            fill-rule='evenodd'
+            d='M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z'
+            clip-rule='evenodd'></path></svg
         >
-          <div id="canvas"></div>
-
-          <div class="curtain">
-            <img
-              src="./img/me.webp"
-              loading="lazy"
-              data-sampler="simplePlaneTexture"
-              width="400"
-              height="400"
-              alt="Olivia Davis"
-              id="me"
-            />
-          </div>
-        </div>
+      </a>
+      <a
+        href='#'
+        class='inline-flex items-center justify-center rounded-lg border border-gray-300 px-5 py-3 text-center text-base font-medium text-gray-900 hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 dark:border-gray-700 dark:text-white dark:hover:bg-gray-700 dark:focus:ring-gray-800'>
+        Projects
+      </a>
+    </div>
+    <div class='relative hidden lg:col-span-6 lg:mt-0 lg:flex'>
+      <div class='gradient-overlay'></div>
+      <div class='mx-auto w-4/5'>
+        <Image src={MyPicture} alt={`${fullName} picture`} />
       </div>
     </div>
   </div>
-</div>
+</section>
 
-<script>
-  import Typed from 'typed.js'
-  import '@/assets/js/curtain.js' // uncomment if you want to use the curtains effect and make sure you remove lazy loading and async encoding from the image (don'froget it's bad for performance)
-  import { typedText } from '@/data.json'
-
-  class MyTypeWriter extends HTMLElement {
-    constructor() {
-      super()
-
-      // Read the message from the data attribute.
-      const strings = this.dataset.texts.split(',')
-
-      const options = {
-        strings,
-        typeSpeed: 120,
-        backSpeed: 50,
-        backDelay: 1500,
-        loop: true,
-      }
-
-      var typed = new Typed('#headline', options)
-    }
+<style>
+  .gradient-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 20%;
+    background: linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 0),
+      rgba(255, 255, 255, 1)
+    );
   }
-
-  customElements.define('astro-typewriter', MyTypeWriter)
-</script>
+</style>

@@ -1,47 +1,24 @@
 {
-  "fullName": "Olivia Davis",
-  "metadata": {
-    "title": "Olivia Davis - FullStack Developer",
-    "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptas quod magni enim facilis porro, repellat soluta distinctio deserunt veritatis nam molestiae eius nostrum natus dolor? Voluptates in iusto aspernatur illum",
-    "keywords": [
-      "Olivia Davis",
-      "New York",
-      "FullStack Developer",
-      "TypeScript",
-      "JavaScript",
-      "React",
-      "Angular",
-      "Node.js"
-    ]
-  },
-  "typedText": ["Full Stack Guru", "Design Maestro", "Bug Resolver"],
-  "email": "oliviadavis@example.com",
-  "location": "New York, USA",
-  "description": [
+  "fullName": "Alex Johnson",
+  "rotatingWords": ["Mobile Application", "Web Development", "DevOps AWS"],
+  "aboutMe": [
     "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptas quod magni enim facilis porro, repellat soluta distinctio deserunt veritatis nam molestiae eius nostrum natus dolor? Voluptates in iusto aspernatur illum",
     "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptas quod magni enim facilis porro.",
     " Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptas quod magni enim facilis porro, repellat soluta distinctio deserunt veritatis nam molestiae eius nostrum natus dolor? Voluptates in iusto aspernatur illum."
   ],
-  "links": {
-    "twitter": "https://twitter.com/kotlin",
-    "linkedin": "https://linkedin.com/in/kotlin",
-    "github": "https://github.com/kotlin",
-    "mail": "mailto:oliviadavis@example.com",
-    "blog": "https://blog.example.com"
-  },
   "skills": [
-    "html",
-    "css",
-    "sass",
-    "bootstrap",
-    "tailwind",
     "javascript",
-    "typescript",
-    "react",
-    "next",
-    "node",
-    "git",
-    "astro"
+    "jest",
+    "elixir",
+    "kali",
+    "go",
+    "rust",
+    "cs",
+    "hugo",
+    "postgresql",
+    "flutter",
+    "jenkins",
+    "python"
   ],
   "projects": [
     {
@@ -76,5 +53,14 @@
       "liveDemoURL": "https://github.com/zougari47/portfolio-template",
       "technologies": ["next", "tailwind"]
     }
-  ]
+  ],
+  "contact": {
+    "email": "alex@johnson.dev",
+    "location": "UK, London",
+    "social": {
+      "linkedin": "https://linkedin.com/in/yourUsername",
+      "github": "https://github.com/yourUsername",
+      "insta": "https://www.instagram.com/yourUsername"
+    }
+  }
 }
