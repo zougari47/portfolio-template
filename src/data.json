@@ -23,7 +23,7 @@
   "projects": [
     {
       "imageSrc": "https://res.cloudinary.com/dz209s6jk/image/upload/f_auto,q_auto,w_700/Challenges/qd1p2yaogl41ymtozppc.jpg",
-      "altText": "Connect Four game",
+      "title": "Connect Four game",
       "description": [
         "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptas quod magni enim facilis porro, repellat soluta distinctio deserunt veritatis nam molestiae eius nostrum natus dolor? Voluptates in iusto aspernatur illum",
         "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptas quod magni enim facilis porro.",
@@ -35,7 +35,7 @@
     },
     {
       "imageSrc": "https://res.cloudinary.com/dz209s6jk/image/upload/f_auto,q_auto,w_700/Challenges/zurpxclpp6gavavnw6d2.jpg",
-      "altText": "Entertainment web app",
+      "title": "Entertainment web app",
       "description": [
         "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptas quod magni enim facilis porro, repellat soluta distinctio deserunt veritatis nam molestiae eius nostrum natus dolor? Voluptates in iusto aspernatur illum",
         "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptas quod magni enim facilis porro.",
@@ -47,7 +47,7 @@
     },
     {
       "imageSrc": "https://res.cloudinary.com/dz209s6jk/image/upload/f_auto,q_auto,w_700/Challenges/mubyltw6vmbmndvlymzn.jpg",
-      "altText": "Meet landing page",
+      "title": "Meet landing page",
       "description": [
         "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptas quod magni enim facilis porro, repellat soluta distinctio deserunt veritatis nam molestiae eius nostrum natus dolor? Voluptates in iusto aspernatur illum",
         "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptas quod magni enim facilis porro.",
@@ -59,7 +59,7 @@
     },
     {
       "imageSrc": "https://res.cloudinary.com/dz209s6jk/image/upload/f_auto,q_auto,w_700/Challenges/lowozx0v3khn1hyggkqy.jpg",
-      "altText": "Devjobs web app",
+      "title": "Devjobs web app",
       "description": [
         "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptas quod magni enim facilis porro, repellat soluta distinctio deserunt veritatis nam molestiae eius nostrum natus dolor? Voluptates in iusto aspernatur illum",
         "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptas quod magni enim facilis porro.",

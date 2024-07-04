@@ -11,17 +11,24 @@ import { Image } from 'astro:assets'
         <div class='card shadow-md'>
           <Image
             src={project.imageSrc}
-            alt={project.altText}
+            alt={project.title}
             class='card__image'
             width={600}
             height={600}
             loading='lazy'
           />
           <div class='card__content'>
-            <p class='card__title'>{project.altText}</p>
+            <p class='card__title'>{project.title}</p>
             {project.description.map(p => (
               <p class='card__description'>{p}</p>
             ))}
+            <div class='mt-4'>
+              {project.technologies.map(tech => (
+                <span class='me-2 rounded bg-primary-100 px-2.5 py-0.5 text-xs font-medium text-primary-800 dark:bg-primary-900 dark:text-primary-300'>
+                  {tech}
+                </span>
+              ))}
+            </div>
             <div class='mt-auto flex items-center justify-center gap-4'>
               {project.liveDemoURL && (
                 <a
