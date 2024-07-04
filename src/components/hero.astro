@@ -4,14 +4,6 @@ import { fullName, rotatingWords } from '@/data.json'
 import MyPicture from '@/assets/me.webp'
 
 const words = [...rotatingWords, rotatingWords[0]]
-
-const classMap = {
-  1: 'text-red-600',
-  2: 'text-blue-600',
-  3: 'text-yellow-600',
-  4: 'text-purple-600',
-  5: 'text-orange-600',
-}
 ---
 
 <section id='home' class='min-h-screen bg-white dark:bg-gray-900'>
@@ -24,13 +16,15 @@ const classMap = {
         <span>specialize in</span>
       </h1>
       <div class='mb-6 text-3xl font-extrabold [text-wrap:balance] md:text-6xl'>
-        <span
-          class='via inline-flex h-[calc(theme(fontSize.3xl)*theme(lineHeight.tight))] flex-col overflow-hidden bg-gradient-to-r from-primary-800/90 via-primary-600 to-primary-500 bg-clip-text text-transparent md:h-[calc(theme(fontSize.6xl)*theme(lineHeight.tight))]'>
+        <div
+          id='span'
+          class='inline-flex7 block h-[calc(theme(fontSize.3xl)*theme(lineHeight.tight))] flex-col overflow-hidden md:h-[calc(theme(fontSize.6xl)*theme(lineHeight.tight))]'>
           <ul
             class='block animate-text-slide text-left leading-tight [&_li]:block'>
             {
               words.map((word, i) => (
                 <li
+                  class='bg-gradient-to-r from-primary-700 via-primary-600 to-primary-500 bg-clip-text text-transparent'
                   {...(word === words.at(-1) && i > 0
                     ? { 'aria-hidden': 'true' }
                     : {})}>
@@ -39,7 +33,7 @@ const classMap = {
               ))
             }
           </ul>
-        </span>
+        </div>
       </div>
       <a
         href='#contact'
@@ -91,5 +85,10 @@ const classMap = {
       rgba(255, 255, 255, 0),
       rgba(255, 255, 255, 1)
     );
+  }
+
+  #span {
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
   }
 </style>
