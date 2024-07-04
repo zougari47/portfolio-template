@@ -1,11 +1,8 @@
 ---
 import { Image } from 'astro:assets'
-import MyPicture from '@/assets/me.png'
 import { fullName, rotatingWords } from '@/data.json'
+import MyPicture from '@/assets/me.webp'
 
-// const animationClass = `animate-text-slide-${rotatingWords.length}`
-
-const animationClass = (number: number) => `animate-text-slide-${number}`
 const words = [...rotatingWords, rotatingWords[0]]
 
 const classMap = {
@@ -30,7 +27,7 @@ const classMap = {
         <span
           class='via inline-flex h-[calc(theme(fontSize.3xl)*theme(lineHeight.tight))] flex-col overflow-hidden bg-primary-500 bg-gradient-to-tr from-primary-700 to-primary-400 bg-clip-text text-transparent md:h-[calc(theme(fontSize.6xl)*theme(lineHeight.tight))]'>
           <ul
-            class='animate-text-slide-3 block text-left leading-tight [&_li]:block'>
+            class='block animate-text-slide text-left leading-tight [&_li]:block'>
             {
               words.map((word, i) => (
                 <li
