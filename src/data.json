@@ -24,7 +24,11 @@
     {
       "imageSrc": "https://res.cloudinary.com/dz209s6jk/image/upload/f_auto,q_auto,w_700/Challenges/qd1p2yaogl41ymtozppc.jpg",
       "altText": "Connect Four game",
-      "description": "Play a game of Connect Four against another human player (alternating turns on the same computer)",
+      "description": [
+        "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptas quod magni enim facilis porro, repellat soluta distinctio deserunt veritatis nam molestiae eius nostrum natus dolor? Voluptates in iusto aspernatur illum",
+        "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptas quod magni enim facilis porro.",
+        " Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptas quod magni enim facilis porro, repellat soluta distinctio deserunt veritatis nam molestiae eius nostrum natus dolor? Voluptates in iusto aspernatur illum."
+      ],
       "codeSrc": "https://github.com/zougari47/portfolio-template",
       "liveDemoURL": "https://github.com/zougari47/portfolio-template",
       "technologies": ["typescript", "tailwind", "next"]
@@ -32,7 +36,11 @@
     {
       "imageSrc": "https://res.cloudinary.com/dz209s6jk/image/upload/f_auto,q_auto,w_700/Challenges/zurpxclpp6gavavnw6d2.jpg",
       "altText": "Entertainment web app",
-      "description": "Navigate between Home, Movies, TV Series, and Bookmarked Shows pages",
+      "description": [
+        "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptas quod magni enim facilis porro, repellat soluta distinctio deserunt veritatis nam molestiae eius nostrum natus dolor? Voluptates in iusto aspernatur illum",
+        "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptas quod magni enim facilis porro.",
+        " Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptas quod magni enim facilis porro, repellat soluta distinctio deserunt veritatis nam molestiae eius nostrum natus dolor? Voluptates in iusto aspernatur illum."
+      ],
       "codeSrc": "https://github.com/zougari47/portfolio-template",
       "liveDemoURL": "https://github.com/zougari47/portfolio-template",
       "technologies": ["node"]
@@ -40,7 +48,11 @@
     {
       "imageSrc": "https://res.cloudinary.com/dz209s6jk/image/upload/f_auto,q_auto,w_700/Challenges/mubyltw6vmbmndvlymzn.jpg",
       "altText": "Meet landing page",
-      "description": "View the optimal layout depending on their device's screen size",
+      "description": [
+        "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptas quod magni enim facilis porro, repellat soluta distinctio deserunt veritatis nam molestiae eius nostrum natus dolor? Voluptates in iusto aspernatur illum",
+        "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptas quod magni enim facilis porro.",
+        " Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptas quod magni enim facilis porro, repellat soluta distinctio deserunt veritatis nam molestiae eius nostrum natus dolor? Voluptates in iusto aspernatur illum."
+      ],
       "codeSrc": "https://github.com/zougari47/portfolio-template",
       "liveDemoURL": "https://github.com/zougari47/portfolio-template",
       "technologies": ["astro", "react", "tailwind"]
@@ -48,7 +60,11 @@
     {
       "imageSrc": "https://res.cloudinary.com/dz209s6jk/image/upload/f_auto,q_auto,w_700/Challenges/lowozx0v3khn1hyggkqy.jpg",
       "altText": "Devjobs web app",
-      "description": "Devjobs web app",
+      "description": [
+        "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptas quod magni enim facilis porro, repellat soluta distinctio deserunt veritatis nam molestiae eius nostrum natus dolor? Voluptates in iusto aspernatur illum",
+        "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptas quod magni enim facilis porro.",
+        " Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptas quod magni enim facilis porro, repellat soluta distinctio deserunt veritatis nam molestiae eius nostrum natus dolor? Voluptates in iusto aspernatur illum."
+      ],
       "codeSrc": "https://github.com/zougari47/portfolio-template",
       "liveDemoURL": "https://github.com/zougari47/portfolio-template",
       "technologies": ["next", "tailwind"]
