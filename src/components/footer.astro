@@ -5,10 +5,9 @@ import { fullName, contact } from '@/data.json'
 const { social } = contact
 ---
 
-<footer class='flex h-[var(--footer-height)] items-center justify-between p-4'>
+<footer class='container flex items-center justify-between p-4'>
   <div>&copy; {today.getFullYear()} {fullName}.</div>
 
-  {/* socila media links */}
   <div class='flex gap-3'>
     <a href={social.linkedin} target='_blank'>
       <span class='sr-only'>My Linkedin</span>
