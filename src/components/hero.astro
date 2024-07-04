@@ -14,7 +14,7 @@ const classMap = {
 }
 ---
 
-<section class='min-h-screen bg-white dark:bg-gray-900'>
+<section id='home' class='min-h-screen bg-white dark:bg-gray-900'>
   <div
     class='mx-auto grid max-w-screen-xl px-4 py-8 lg:grid-cols-12 lg:gap-8 lg:py-16 xl:gap-0'>
     <div class='mr-auto place-self-center lg:col-span-6'>
@@ -42,22 +42,30 @@ const classMap = {
         </span>
       </div>
       <a
-        href='#'
+        href='#contact'
         class='mr-3 inline-flex items-center justify-center rounded-lg bg-primary-700 px-5 py-3 text-center text-base font-medium text-white hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 dark:focus:ring-primary-900'>
-        Hire Me
+        <span>Hire Me</span>
         <svg
-          class='-mr-1 ml-2 h-5 w-5'
-          fill='currentColor'
-          viewBox='0 0 20 20'
           xmlns='http://www.w3.org/2000/svg'
+          width='24'
+          height='24'
+          viewBox='0 0 24 24'
+          fill='none'
+          stroke='currentColor'
+          stroke-width='2'
+          stroke-linecap='round'
+          stroke-linejoin='round'
+          class='ml-1'
           ><path
-            fill-rule='evenodd'
-            d='M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z'
-            clip-rule='evenodd'></path></svg
+            d='M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z'
+          ></path><path
+            d='m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z'
+          ></path><path d='M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0'></path><path
+            d='M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5'></path></svg
         >
       </a>
       <a
-        href='#'
+        href='#projects'
         class='inline-flex items-center justify-center rounded-lg border border-gray-300 px-5 py-3 text-center text-base font-medium text-gray-900 hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 dark:border-gray-700 dark:text-white dark:hover:bg-gray-700 dark:focus:ring-gray-800'>
         Projects
       </a>
@@ -65,7 +73,7 @@ const classMap = {
     <div class='relative hidden lg:col-span-6 lg:mt-0 lg:flex'>
       <div class='gradient-overlay'></div>
       <div class='mx-auto w-4/5'>
-        <Image src={MyPicture} alt={`${fullName} picture`} />
+        <Image src={MyPicture} alt={`${fullName}`} loading='eager' />
       </div>
     </div>
   </div>
