@@ -1,5 +1,6 @@
 ---
 import { projects } from '@/data.json'
+import { Image } from 'astro:assets'
 ---
 
 <section class='min-h-screen' id='projects'>
@@ -8,7 +9,14 @@ import { projects } from '@/data.json'
     {
       projects.map(project => (
         <div class='card shadow-md'>
-          <img src={project.imageSrc} alt='' />
+          <Image
+            src={project.imageSrc}
+            alt={project.altText}
+            class='card__image'
+            width={600}
+            height={600}
+            loading='eager'
+          />
           <div class='card__content'>
             <p class='card__title'>{project.altText}</p>
             {project.description.map(p => (

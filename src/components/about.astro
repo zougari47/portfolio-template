@@ -1,5 +1,6 @@
 ---
 import { skills, aboutMe } from '@/data.json'
+import { Image } from 'astro:assets'
 ---
 
 <section id='about' class='min-h-screen bg-white dark:bg-gray-900'>
@@ -24,10 +25,13 @@ import { skills, aboutMe } from '@/data.json'
         {
           skills.map(skill => (
             <div title={skill} class='flex justify-center'>
-              <img
+              <Image
                 class='block w-16'
                 src={`https://go-skill-icons.vercel.app/api/icons?i=${skill}&titles=true`}
-                loading='lazy'
+                loading='eager'
+                width={50}
+                height={50}
+                alt={skill}
               />
             </div>
           ))
