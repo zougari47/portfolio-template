@@ -2,8 +2,8 @@
 import { contact, fullName } from '@/data.json'
 ---
 
-<section id='contact' class='min-h-screen'>
-  <h2 class='mb-6 mt-8 text-center text-4xl'>CONTACT ME</h2>
+<section id='contact' class='min-h-[600px]'>
+  <h2 class='mb-6 text-center text-4xl'>CONTACT ME</h2>
   <div class='grid grid-cols-1 md:grid-cols-12'>
     <div
       class='col-span-12 mb-4 grid content-start md:col-span-4'
@@ -68,7 +68,7 @@ import { contact, fullName } from '@/data.json'
           <input
             type='text'
             id='name'
-            class='block w-full rounded-lg border border-gray-300 bg-gray-50 p-4 text-base text-gray-900 focus:border-blue-500 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-blue-500 dark:focus:ring-blue-500'
+            class='block w-full rounded-lg border border-gray-300 bg-gray-50 p-4 text-base text-gray-900 focus:border-primary-500 focus:ring-primary-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-primary-500 dark:focus:ring-primary-500'
             placeholder={fullName.split(' ')[0]}
           />
         </div>
@@ -83,7 +83,7 @@ import { contact, fullName } from '@/data.json'
           <input
             id='email'
             type='email'
-            class='block w-full rounded-lg border border-gray-300 bg-gray-50 p-4 text-base text-gray-900 focus:border-blue-500 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-blue-500 dark:focus:ring-blue-500'
+            class='block w-full rounded-lg border border-gray-300 bg-gray-50 p-4 text-base text-gray-900 focus:border-primary-500 focus:ring-primary-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-primary-500 dark:focus:ring-primary-500'
             placeholder={contact.email}
           />
         </div>
@@ -98,7 +98,7 @@ import { contact, fullName } from '@/data.json'
           <textarea
             id='message'
             rows='8'
-            class='block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-blue-500 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-blue-500 dark:focus:ring-blue-500'
+            class='block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-primary-500 focus:ring-primary-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-primary-500 dark:focus:ring-primary-500'
             placeholder='I would like to ...'></textarea>
         </div>
 
@@ -132,7 +132,7 @@ import { contact, fullName } from '@/data.json'
         <div>
           <button
             type='submit'
-            class='rounded-lg bg-blue-700 px-5 py-3 text-center text-base font-medium text-white hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800'
+            class='rounded-lg bg-primary-700 px-5 py-3 text-center text-base font-medium text-white hover:bg-primary-800 focus:outline-none focus:ring-4 focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800'
             >Send
 
             <svg

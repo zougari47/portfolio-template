@@ -3,9 +3,9 @@ import { projects } from '@/data.json'
 import { Image } from 'astro:assets'
 ---
 
-<section class='min-h-screen' id='projects'>
+<section class='min-h-[600px]' id='projects'>
   <h2 class='mb-6 text-center text-4xl'>PROJECTS</h2>
-  <div class='grid grid-cols-1 place-items-center gap-y-8 md:grid-cols-2'>
+  <div class='mb-12 grid grid-cols-1 place-items-center gap-y-8 md:grid-cols-2'>
     {
       projects.map(project => (
         <div class='card shadow-md'>
