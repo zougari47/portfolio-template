@@ -6,19 +6,20 @@ import MyPicture from '@/assets/me.webp'
 const words = [...rotatingWords, rotatingWords[0]]
 ---
 
-<section id='home' class='min-h-screen bg-white dark:bg-gray-900'>
+<section id='home' class='mb-8 flex min-h-[600px] dark:bg-gray-900'>
   <div
-    class='mx-auto grid max-w-screen-xl px-4 py-8 lg:grid-cols-12 lg:gap-8 lg:py-16 xl:gap-0'>
-    <div class='mr-auto place-self-center lg:col-span-6'>
+    class='flex w-full flex-1 flex-col items-center justify-around md:flex-none md:flex-row'>
+    <div class='place-self-center overflow-visible md:w-1/2'>
       <h1
-        class='mb-4 max-w-2xl text-4xl font-extrabold leading-none tracking-tight md:text-5xl xl:text-6xl dark:text-white'>
+        class='mb-4 text-4xl font-extrabold leading-none tracking-tight md:text-5xl xl:text-6xl dark:text-white'>
         <span>I'm {fullName.split(' ')[0]} and I </span>
         <span>specialize in</span>
       </h1>
-      <div class='mb-6 text-3xl font-extrabold [text-wrap:balance] md:text-6xl'>
+      <div
+        class='mb-6 text-3xl font-extrabold [text-wrap:balance] md:text-4xl lg:text-5xl 2xl:text-6xl'>
         <div
           id='span'
-          class='inline-flex7 block h-[calc(theme(fontSize.3xl)*theme(lineHeight.tight))] flex-col overflow-hidden md:h-[calc(theme(fontSize.6xl)*theme(lineHeight.tight))]'>
+          class='block h-[calc(theme(fontSize.3xl)*theme(lineHeight.tight))] flex-col overflow-hidden md:h-[calc(theme(fontSize.4xl)*theme(lineHeight.tight))] lg:h-[calc(theme(fontSize.5xl)*theme(lineHeight.tight))] 2xl:h-[calc(theme(fontSize.6xl)*theme(lineHeight.tight))]'>
           <ul
             class='block animate-text-slide text-left leading-tight [&_li]:block'>
             {
@@ -64,7 +65,7 @@ const words = [...rotatingWords, rotatingWords[0]]
         Projects
       </a>
     </div>
-    <div class='relative hidden lg:col-span-6 lg:mt-0 lg:flex'>
+    <div class='relative md:w-1/2'>
       <div class='gradient-overlay'></div>
       <div class='mx-auto w-4/5'>
         <Image src={MyPicture} alt={`${fullName}`} loading='eager' />
