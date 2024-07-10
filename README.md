@@ -1,1 +1,2 @@
-- fix header z index
+- ~~fix header z index~~
+- max height 800px for section instead of min screen
