@@ -118,9 +118,15 @@ import { contact, fullName } from '@/data.json'
             ></path>
           </svg>
           <span class='sr-only'>Info</span>
-          <div id='alert-body'>
-            Change a few things up and try submitting again.
-          </div>
+          <div id='alert-body'></div>
+        </div>
+
+        <div
+          id='success-alert'
+          style='display: none;'
+          class='mb-4 rounded-lg bg-green-50 p-4 text-sm text-green-800 dark:bg-gray-800 dark:text-green-400'
+          role='alert'>
+          Message sent successfully
         </div>
 
         <div>
@@ -161,6 +167,15 @@ import { contact, fullName } from '@/data.json'
   const messageInput = $('#message') as HTMLTextAreaElement
   const alertContainer = $('#alert-container') as HTMLDivElement
   const alertBody = $('#alert-body') as HTMLDivElement
+  const alertSuccess = $('#success-alert') as HTMLDivElement
+
+  function getFormValues() {
+    const name = nameInput!.value ?? ''
+    const email = emailInput!.value ?? ''
+    const message = messageInput!.value ?? ''
+
+    return { name, email, message }
+  }
 
   function validate() {
     const schema = v.object({
@@ -172,24 +187,62 @@ import { contact, fullName } from '@/data.json'
       ),
     })
 
-    const name = nameInput!.value ?? ''
-    const email = emailInput!.value ?? ''
-    const message = messageInput!.value ?? ''
+    const { name, email, message } = getFormValues()
 
     const result = v.safeParse(schema, { name, email, message })
 
     if (!result.success) {
       alertContainer.style.display = 'flex'
       alertBody.textContent = result.issues[0].message
-    } else {
-      alertContainer.style.display = 'none'
-      return true
+      return false
     }
+
+    alertContainer.style.display = 'none'
+    return true
   }
 
   form.addEventListener('submit', e => {
     e.preventDefault()
-    validate()
+    const isValid = validate()
+
+    alertSuccess.style.display = 'block'
+
+    if (isValid) {
+      const data = {
+        ...getFormValues(),
+        access_key: import.meta.env.PUBLIC_WEB3_FORMS,
+      }
+
+      fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          Accept: 'application/json',
+        },
+        body: JSON.stringify(data),
+      })
+        .then(async response => {
+          const res = await response.json()
+          if (res.status == 200) {
+            alertContainer.style.display = 'none'
+            alertSuccess.style.display = 'block'
+          } else {
+            alertContainer.style.display = 'none'
+            alertBody.textContent = "Somthing went wrong! message didn't sent."
+          }
+        })
+        .catch(error => {
+          console.log(error)
+          alertContainer.style.display = 'none'
+          alertBody.textContent = "Somthing went wrong! message didn't sent."
+        })
+        .then(function () {
+          form.reset()
+          setTimeout(() => {
+            alertSuccess.style.display = 'none'
+          }, 3000)
+        })
+    }
   })
 
   form.reset()
