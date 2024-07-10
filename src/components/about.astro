@@ -3,24 +3,23 @@ import { skills, aboutMe } from '@/data.json'
 import { Image } from 'astro:assets'
 ---
 
-<section id='about' class='min-h-screen bg-white dark:bg-gray-900'>
-  <div class='mx-auto grid max-w-screen-xl lg:grid-cols-12'>
-    <div class='col-span-6 text-center text-4xl'>
+<section id='about' class='bg-white dark:bg-gray-900'>
+  <div class='flex text-center text-4xl md:translate-y-24'>
+    <div class='mb-6 w-full md:w-1/2'>
       <h2>ABOUT ME</h2>
     </div>
-    <div class='col-span-6 text-center text-4xl'>
+    <div class='mb-6 hidden md:block md:w-1/2'>
       <h2>SKILLS</h2>
     </div>
   </div>
   <div
-    class='mx-auto grid max-w-screen-xl px-4 py-8 lg:grid-cols-12 lg:gap-8 lg:py-16 xl:gap-0'>
-    <div
-      class='mr-auto place-self-start text-lg lg:col-span-6 [&_p:not(:last-child)]:mb-4'>
+    class='flex h-full min-h-[600px] flex-col gap-6 border-red-500 md:flex-row md:items-center md:gap-0'>
+    <div class='md:w-1/2 md:text-lg 2xl:text-lg [&_p:not(:last-child)]:mb-4'>
       <p>{aboutMe[0]}</p>
-      <p>{aboutMe[0]}</p>
-      <p>{aboutMe[0]}</p>
+      <p>{aboutMe[1]}</p>
+      <p>{aboutMe[2]}</p>
     </div>
-    <div class='relative hidden lg:col-span-6 lg:mt-0 lg:block'>
+    <div class='relative mb-12 md:mb-0 md:w-1/2'>
       <div class='grid grid-cols-3 gap-y-3'>
         {
           skills.map(skill => (
