@@ -1,4 +1,9 @@
 {
+  "metaData": {
+    "title": "Full Stack Developer",
+    "description": "I am fullstack dev that build fast website. based in ...",
+    "keywords": ["fullstack", "javascript", "devops", "london dev"]
+  },
   "fullName": "Alex Johnson",
   "rotatingWords": ["Mobile Application", "Web Development", "DevOps AWS"],
   "aboutMe": [
