@@ -24,50 +24,26 @@
     {
       "imageSrc": "https://res.cloudinary.com/dz209s6jk/image/upload/f_auto,q_auto,w_700/Challenges/qd1p2yaogl41ymtozppc.jpg",
       "title": "Connect Four game",
-      "description": [
-        "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptas quod magni enim facilis porro, repellat soluta distinctio deserunt veritatis nam molestiae eius nostrum natus dolor? Voluptates in iusto aspernatur illum",
-        "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptas quod magni enim facilis porro.",
-        " Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptas quod magni enim facilis porro, repellat soluta distinctio deserunt veritatis nam molestiae eius nostrum natus dolor? Voluptates in iusto aspernatur illum."
-      ],
       "codeSrc": "https://github.com/zougari47/portfolio-template",
-      "liveDemoURL": "https://github.com/zougari47/portfolio-template",
-      "technologies": ["typescript", "tailwind", "next"]
+      "liveDemoURL": "https://github.com/zougari47/portfolio-template"
     },
     {
       "imageSrc": "https://res.cloudinary.com/dz209s6jk/image/upload/f_auto,q_auto,w_700/Challenges/zurpxclpp6gavavnw6d2.jpg",
       "title": "Entertainment web app",
-      "description": [
-        "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptas quod magni enim facilis porro, repellat soluta distinctio deserunt veritatis nam molestiae eius nostrum natus dolor? Voluptates in iusto aspernatur illum",
-        "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptas quod magni enim facilis porro.",
-        " Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptas quod magni enim facilis porro, repellat soluta distinctio deserunt veritatis nam molestiae eius nostrum natus dolor? Voluptates in iusto aspernatur illum."
-      ],
       "codeSrc": "https://github.com/zougari47/portfolio-template",
-      "liveDemoURL": "https://github.com/zougari47/portfolio-template",
-      "technologies": ["node"]
+      "liveDemoURL": "https://github.com/zougari47/portfolio-template"
     },
     {
       "imageSrc": "https://res.cloudinary.com/dz209s6jk/image/upload/f_auto,q_auto,w_700/Challenges/mubyltw6vmbmndvlymzn.jpg",
       "title": "Meet landing page",
-      "description": [
-        "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptas quod magni enim facilis porro, repellat soluta distinctio deserunt veritatis nam molestiae eius nostrum natus dolor? Voluptates in iusto aspernatur illum",
-        "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptas quod magni enim facilis porro.",
-        " Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptas quod magni enim facilis porro, repellat soluta distinctio deserunt veritatis nam molestiae eius nostrum natus dolor? Voluptates in iusto aspernatur illum."
-      ],
       "codeSrc": "https://github.com/zougari47/portfolio-template",
-      "liveDemoURL": "https://github.com/zougari47/portfolio-template",
-      "technologies": ["astro", "react", "tailwind"]
+      "liveDemoURL": "https://github.com/zougari47/portfolio-template"
     },
     {
       "imageSrc": "https://res.cloudinary.com/dz209s6jk/image/upload/f_auto,q_auto,w_700/Challenges/lowozx0v3khn1hyggkqy.jpg",
       "title": "Devjobs web app",
-      "description": [
-        "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptas quod magni enim facilis porro, repellat soluta distinctio deserunt veritatis nam molestiae eius nostrum natus dolor? Voluptates in iusto aspernatur illum",
-        "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptas quod magni enim facilis porro.",
-        " Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptas quod magni enim facilis porro, repellat soluta distinctio deserunt veritatis nam molestiae eius nostrum natus dolor? Voluptates in iusto aspernatur illum."
-      ],
       "codeSrc": "https://github.com/zougari47/portfolio-template",
-      "liveDemoURL": "https://github.com/zougari47/portfolio-template",
-      "technologies": ["next", "tailwind"]
+      "liveDemoURL": "https://github.com/zougari47/portfolio-template"
     }
   ],
   "contact": {
