@@ -1,7 +1,7 @@
 ---
 import { Image } from 'astro:assets'
 import { fullName, rotatingWords } from '@/data.json'
-import MyPicture from '@/assets/me.webp'
+import MyPicture from '@/assets/me.png'
 
 const words = [...rotatingWords, rotatingWords[0]]
 ---
@@ -86,10 +86,5 @@ const words = [...rotatingWords, rotatingWords[0]]
       rgba(255, 255, 255, 0),
       rgba(255, 255, 255, 1)
     );
-  }
-
-  #span {
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
   }
 </style>

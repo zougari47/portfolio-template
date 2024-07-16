@@ -1,7 +1,9 @@
 {
-  "name": "rust",
+  "name": "portfolio-template",
+  "description": "Deploy your portfolio in 5 minutes ⚡ Built with Astro 🚀 and TailwindCSS ✨ Achieve a perfect Lighthouse score 💯 ",
+  "author": "Ahmed Zougari <contact@ahmedz.dev> (http://ahmedz.dev)",
   "type": "module",
-  "version": "0.0.1",
+  "version": "3.0.0",
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
