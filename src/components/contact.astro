@@ -4,7 +4,7 @@ import { contact, fullName } from '@/data.json'
 
 <section id='contact' class='min-h-[600px]'>
   <h2 class='mb-6 text-center text-4xl'>CONTACT ME</h2>
-  <div class='grid grid-cols-1 md:grid-cols-12'>
+  <div class='grid grid-cols-1 gap-4 md:grid-cols-12'>
     <div
       class='col-span-12 mb-4 grid content-start md:col-span-4'
       data-aos='fade-right'
@@ -205,8 +205,6 @@ import { contact, fullName } from '@/data.json'
     e.preventDefault()
     const isValid = validate()
 
-    alertSuccess.style.display = 'block'
-
     if (isValid) {
       const data = {
         ...getFormValues(),
@@ -223,25 +221,21 @@ import { contact, fullName } from '@/data.json'
       })
         .then(async response => {
           const res = await response.json()
-          if (res.status == 200) {
+
+          if (res.success) {
             alertContainer.style.display = 'none'
             alertSuccess.style.display = 'block'
           } else {
-            alertContainer.style.display = 'none'
+            alertContainer.style.display = 'flex'
             alertBody.textContent = "Somthing went wrong! message didn't sent."
           }
         })
         .catch(error => {
           console.log(error)
-          alertContainer.style.display = 'none'
+          alertContainer.style.display = 'flex'
           alertBody.textContent = "Somthing went wrong! message didn't sent."
         })
-        .then(function () {
-          form.reset()
-          setTimeout(() => {
-            alertSuccess.style.display = 'none'
-          }, 3000)
-        })
+        .then(() => form.reset())
     }
   })
 
